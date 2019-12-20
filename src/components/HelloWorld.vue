@@ -1,6 +1,6 @@
 <template>
   <div class="main_wrapper">
-   <h1>FOOD</h1>
+   <div class="background_text">FOOD</div>
     <div class="navbar">
       <div>
         <img class="logo" src="../assets/efc_logo.svg"/>
@@ -31,8 +31,8 @@
         <img src="../assets/cart1.svg"/> ORDER NOW
       </button>
     </div>
-    <div class="right">       
-      <img class="plate" src="../assets/plate.svg"/>
+    <div class="yummy_food">       
+      <img src="../assets/plate.svg"/>
     </div>
   </div> 
   <div>
@@ -55,8 +55,8 @@ export default {
 
 <style scoped>
 .main_wrapper {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 .main_wrapper::after {
@@ -79,20 +79,19 @@ export default {
   font-size: 14px;
   line-height: 27px;
   color: #2C3C27;
-      cursor: pointer;
+  cursor: pointer;
 }
  a.link:hover{
     color: #918A4C;
-
 }
 .logo {
   float: left;
 }
-h1 {
+.background_text {
   position: absolute;
-  margin: -360px 0px 0px -62px;
-  line-height: 593px;
-  font-size: 360px;
+  top: -230px;
+  left: -20px;
+  font-size: 328px;
   letter-spacing: 0.02em;
   opacity: 0.05;
   font: bold;
@@ -102,17 +101,16 @@ h1 {
 }
 .cart{
   position: absolute;
-  margin-left: 190px;
+  right: 28px;
   border-radius: 50%;
   background: black;
   padding: 15px;
   z-index: 999;
 }
-.plate {
-  z-index: 999;
-  margin: 0px 0px 0px -240px; 
+.content { 
+  display: grid;
+  grid-template-columns: 1fr 3fr  3fr;
 }
-.content { display: flex;}
 .leaf {
   margin: 80px 0px 0px 340px;
 }
@@ -154,30 +152,42 @@ button{
   cursor: pointer;
   outline: none;
 }
-.right {
-    z-index: 1;
+.yummy_food img {
+  position: relative;
+  right: 360px;
 }
 .left {
   text-align: justify;
   margin-left: 130px;
 }
 .arrow {
-  margin: 60px 0px 0px 45px;
+  margin: -60px 0px 0px 45px;
 }
 .social_icons {
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 2em 2em 2em;
-  margin: -150px 0px 0px 1370px;
   z-index: 1;
+  right: 30px;
+  bottom: 190px;
 }
 .copy_right {
   position: absolute;
   font-size: 11px;
-  margin: -20px 0px 0px 1170px;
   font-style: normal;
   color: #918A4C;
   z-index: 1;
+  right: 30px;
+  bottom: 40px;
+}
+@media screen and (max-width: 1320px) {
+
+}
+@media screen and (max-width: 980px) {
+
+}
+@media screen and (max-width: 680px) {
+
 }
 </style>
